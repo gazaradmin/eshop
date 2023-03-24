@@ -1,3 +1,4 @@
+import 'package:dropshopping/screens/products_overview_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,24 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'My Shop',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.deepOrange,
+        ),
+        fontFamily: 'Lato',
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('E-SHOP'),
-      ),
+      home: ProductsOverviewScreen(),
     );
   }
 }
