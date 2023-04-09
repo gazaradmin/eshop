@@ -1,3 +1,4 @@
+import 'package:dropshopping/screens/product_detail_screen.dart';
 import 'package:dropshopping/screens/products_overview_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Lato',
       ),
       home: ProductsOverviewScreen(),
+      routes: {
+        ProductDetailScreen.routeName: (ctx) => const ProductDetailScreen(),
+      },
     );
   }
 }
